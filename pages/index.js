@@ -4,71 +4,74 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
 	return (
-		<div className="flex flex-col h-screen w-full bg-[url('/heroimage.png')] bg-no-repeat bg-cover ">
-			<div className="flex flex-row items-center justify-between w-full p-10">
-				<div className="flex flex-row items-center space-x-10">
-					<Image src="/logo.png" width={50} height={50} />
-					<nav className="flex flex-row space-x-10 text-sm">
-						<Link href="">Home</Link>
-						<Link href="">MarketPlace</Link>
-						<Link href="">About</Link>
-						<Link href="">Wallet</Link>
-					</nav>
-				</div>
-				<div className="flex flex-row justify-between space-x-10">
-					<div className="flex items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg px-4 py-2">
-						<MagnifyingGlassIcon
-							width={20}
-							height={20}
-							className="text-white"
-						/>
-						<input
-							className="bg-transparent text-white placeholder-white/70 focus:outline-none ml-2 text-sm"
-							placeholder="Search By Creator"
-						/>
+		<div className="flex flex-col w-full  ">
+			{/* HERO SCREEN */}
+			<div className="flex flex-col h-screen bg-[url('/heroimage.png')] bg-no-repeat bg-cover">
+				<div className="flex flex-row items-center justify-between w-full p-10">
+					<div className="flex flex-row items-center space-x-10">
+						<Image src="/logo.png" width={50} height={50} />
+						<nav className="flex flex-row space-x-10 text-sm">
+							<Link href="">Home</Link>
+							<Link href="">MarketPlace</Link>
+							<Link href="">About</Link>
+							<Link href="">Wallet</Link>
+						</nav>
 					</div>
-					<button className="rounded-full bg-none bg-transparent  text-sm px-7 py-3 shadow-custom shadow-cyan-500/50">
-						Join Waitlist
+					<div className="flex flex-row justify-between space-x-10">
+						<div className="flex items-center bg-white/20 backdrop-blur-lg rounded-lg shadow-lg px-4 py-2">
+							<MagnifyingGlassIcon
+								width={20}
+								height={20}
+								className="text-white"
+							/>
+							<input
+								className="bg-transparent text-white placeholder-white/70 focus:outline-none ml-2 text-sm"
+								placeholder="Search By Creator"
+							/>
+						</div>
+						<button className="rounded-full bg-none bg-transparent  text-sm px-7 py-3 shadow-custom shadow-cyan-500/50">
+							Join Waitlist
+						</button>
+					</div>
+				</div>
+				{/* HERO SECTION BELOW */}
+				<div className="flex flex-col mt-10 px-10">
+					<h2
+						style={{ WebkitTextStroke: "2px #26135080", color: "transparent" }}
+						className="font-custom text-[60px] bg-gradient-to-r from-white to-[#5FECFC] text-transparent bg-clip-text w-9/12">
+						Discover and Trade Extraordinary Digital Arts
+					</h2>
+
+					<h5 className="text-xl text-gray-400 font-thin">
+						Join the vibrant community of creators and collectors
+					</h5>
+					<button className="bg-gradient-to-r from-[#2575FF] via-[#5FECFC] to-[#57E493] rounded-full text-black w-fit mt-10 shadow-custom shadow-cyan-500/50 text-lg px-10 py-3">
+						Explore Now
 					</button>
-				</div>
-			</div>
-			{/* HERO SECTION BELOW */}
-			<div className="flex flex-col mt-10 px-10">
-				<h2
-					style={{ WebkitTextStroke: "2px #26135080", color: "transparent" }}
-					className="font-custom text-[60px] bg-gradient-to-r from-white to-[#5FECFC] text-transparent bg-clip-text w-9/12">
-					Discover and Trade Extraordinary Digital Arts
-				</h2>
-
-				<h5 className="text-xl text-gray-400 font-thin">
-					Join the vibrant community of creators and collectors
-				</h5>
-				<button className="bg-gradient-to-r from-[#2575FF] via-[#5FECFC] to-[#57E493] rounded-full text-black w-fit mt-10 shadow-custom shadow-cyan-500/50 text-lg px-10 py-3">
-					Explore Now
-				</button>
-				<div className="flex flex-row rounded-3xl w-fit mt-10 p-5 space-x-14 bg-[#30303080]">
-					<div className="flex flex-col space-y-1 justify-center items-center">
-						<h3 className="font-custom text-3xl">28k+</h3>
-						<h6 className="text-[#5FECFC]">Satisfied Users</h6>
-					</div>
-					<div className="flex flex-col space-y-2 justify-center items-center">
-						<h3 className="font-custom text-3xl">18k+</h3>
-						<h6 className="text-[#5FECFC]">Artists</h6>
-					</div>
-					<div className="flex flex-col space-y-2 justify-center items-center">
-						<h3 className="font-custom text-3xl">20k+</h3>
-						<h6 className="text-[#5FECFC]">Distributors</h6>
+					<div className="flex flex-row rounded-3xl w-fit mt-10 p-5 space-x-14 bg-[#30303080]">
+						<div className="flex flex-col space-y-1 justify-center items-center">
+							<h3 className="font-custom text-3xl">28k+</h3>
+							<h6 className="text-[#5FECFC]">Satisfied Users</h6>
+						</div>
+						<div className="flex flex-col space-y-2 justify-center items-center">
+							<h3 className="font-custom text-3xl">18k+</h3>
+							<h6 className="text-[#5FECFC]">Artists</h6>
+						</div>
+						<div className="flex flex-col space-y-2 justify-center items-center">
+							<h3 className="font-custom text-3xl">20k+</h3>
+							<h6 className="text-[#5FECFC]">Distributors</h6>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			{/* COMPANY LOGOS  */}
-			<div className="flex flex-row w-full p-10 justify-between mt-5">
-				<Image width={150} height={150} src="/logos/coinbase.svg" />
-				<Image width={150} height={150} src="/logos/spotify.svg" />
-				<Image width={150} height={150} src="/logos/slack.svg" />
-				<Image width={150} height={150} src="/logos/dropbox.svg" />
-				<Image width={150} height={150} src="/logos/webflow.svg" />
+				{/* COMPANY LOGOS  */}
+				<div className="flex flex-row w-full p-10 justify-between mt-5">
+					<Image width={150} height={150} src="/logos/coinbase.svg" />
+					<Image width={150} height={150} src="/logos/spotify.svg" />
+					<Image width={150} height={150} src="/logos/slack.svg" />
+					<Image width={150} height={150} src="/logos/dropbox.svg" />
+					<Image width={150} height={150} src="/logos/webflow.svg" />
+				</div>
 			</div>
 
 			{/* ABOUT NFTS */}
